@@ -1,0 +1,64 @@
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: #1e90ff;
+  z-index: 2000;
+  transition: width 0.2s ease;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 1000;
+  transition: 0.3s ease;
+  background: transparent;
+
+  .nav-container {
+    width: 92%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    color: white;
+    font-weight: 600;
+  }
+
+  ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+
+    li {
+      color: white;
+      font-size: 14px;
+    }
+  }
+
+  .quote-btn {
+    background: #ff8c00;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 4px;
+  }
+}
+
+/* After scroll */
+.navbar-white {
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+
+  .logo {
+    color: #0a1f3c;
+  }
+
+  ul li {
+    color: #0a1f3c;
+  }
+}
