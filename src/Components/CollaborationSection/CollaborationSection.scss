@@ -1,0 +1,130 @@
+.collaboration {
+  padding: 100px 0;
+  background: #f5f5f5;
+  text-align: center;
+position: relative;
+ 
+
+  .container {
+    width: 90%;
+    margin: auto;
+   
+  }
+
+  .main-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .sub-text {
+    max-width: 900px;
+    margin: 0 auto 40px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #555;
+  }
+
+  .small-heading {
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #888;
+    margin-bottom: 10px;
+  }
+
+  .section-title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .description {
+    max-width: 850px;
+    margin: 0 auto 60px;
+    font-size: 15px;
+    color: #666;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+
+  .card {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: 0.3s ease;
+
+    h4 {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 10px;
+        font-size: 14px;
+        color: #555;
+      }
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+
+  .highlight {
+    background: linear-gradient(135deg, #1e73be, #0a4c88);
+    color: #fff;
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      background: #fff;
+      color: #1e73be;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+  }
+
+ 
+}
+
+.collaboration::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 2px dashed #d6d6d6;
+}
+
+.progress-dots {
+  position: absolute;
+  bottom: -9px;  // This aligns dot center on dashed line
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  z-index: 2;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #ffb400;
+  border: 3px solid #f5f5f5;
+}
+
+.dot.blue { background: #1e73be; }
+.dot.red { background: #ff4d4f; }
+.dot.green { background: #52c41a; }
