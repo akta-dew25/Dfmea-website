@@ -1,0 +1,155 @@
+.quote-container {
+  min-height: 100vh;
+  background: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  font-family: proxima-nova, sans-serif;
+}
+
+.quote-card {
+  background: #fff;
+  padding: 40px;
+  width: 100%;
+  max-width: 900px;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+  h1 {
+    text-align: center;
+    font-size: 56px;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+
+  p {
+    text-align: center;
+    color: #888;
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 32px;
+  }
+
+  h3 {
+    margin: 80px 0 20px;
+    font-size: 20px;
+    color: #1866b1;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+  }
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+
+  .full {
+    grid-column: span 2;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+
+  input,
+  select,
+  textarea {
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    font-size: 14px;
+    background: transparent;
+
+    &:focus {
+      border-color: #1a73e8;
+    }
+  }
+
+  textarea {
+    resize: none;
+    height: 100px;
+  }
+
+  .error {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+  }
+}
+
+.checkbox-group {
+  margin: 40px 0;
+
+  p {
+    font-weight: 500;
+    margin-bottom: 30px;
+    text-align: left;
+    color: #1866b1;
+  }
+
+  .checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    label {
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #888;
+    }
+  }
+}
+
+.file-upload {
+  margin: 20px 0;
+
+  input {
+    border: 1px dashed #ccc;
+    padding: 10px;
+    width: 100%;
+  }
+}
+
+.submit-btn {
+  width: 50%;
+  float: right;
+  padding: 16px; // Slightly taller for impact
+  background: linear-gradient(90deg, #1e3a8a 0%, #0ea5e9 50%, #14b8a6 100%);
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3);
+
+  &:hover {
+    background: linear-gradient(90deg, #1e40af 0%, #3b82f6 50%, #2dd4bf 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(30, 58, 138, 0.4);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .checkbox-grid {
+    grid-template-columns: 1fr;
+  }
+}
