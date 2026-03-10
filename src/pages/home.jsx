@@ -14,7 +14,7 @@ const Home = () => {
       <PartnersSection />
 
       {/* request a quote page */}
-      <QuoteForm />
+      {/* <QuoteForm /> */}
     </>
   );
 };
