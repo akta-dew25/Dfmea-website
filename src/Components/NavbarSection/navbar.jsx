@@ -5,22 +5,21 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [activeMenu, setActiveMenu] = useState(null);
 
-  // useEffect(() => {
-  //   const handleScroll = () => setScrolled(window.scrollY > 70);
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, []);
-
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 70);
-      setActiveMenu(null);
-    };
-
+    const handleScroll = () => setScrolled(window.scrollY > 70);
     window.addEventListener("scroll", handleScroll);
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setScrolled(window.scrollY > 70);
+  //     setActiveMenu(null);
+  //   };
+
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
   return (
     <>
@@ -141,7 +140,6 @@ const Navbar = () => {
         </div>
       )}
 
-      {/* TECHNOLOGY MENU */}
       {activeMenu === "technology" && (
         <div
           className="mega-menu"
@@ -208,7 +206,6 @@ const Navbar = () => {
       )}
 
       {/* INDUSTRIES MENU */}
-      {/* SERVICES MENU */}
       {activeMenu === "industries" && (
         <div
           className="mega-menu"
